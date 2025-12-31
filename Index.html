@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flamengo - Nação Rubro-Negra</title>  <!-- Fonte -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  <style>
+    :root {
+      --vermelho: #c40000;
+      --preto: #000000;
+      --branco: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #000000, #7a0000);
+      color: var(--branco);
+      overflow-x: hidden;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 8%;
+    }
+
+    header img {
+      width: 140px;
+      margin-bottom: 25px;
+      animation: fadeDown 1.2s ease;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 15px;
+      max-width: 650px;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .scroll {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      animation: bounce 2s infinite;
+    }
+
+    section {
+      padding: 90px 8%;
+      position: relative;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.65);
+      border-left: 5px solid var(--vermelho);
+      padding: 35px;
+      margin-bottom: 60px;
+      border-radius: 16px;
+      max-width: 900px;
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.8s ease;
+      position: relative;
+    }
+
+    .card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: var(--vermelho);
+    }
+
+    .card p {
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+
+    .player-img {
+      position: absolute;
+      width: 120px;
+      opacity: 0.9;
+    }
+
+    .player-left {
+      left: -60px;
+      bottom: -20px;
+    }
+
+    .player-right {
+      right: -60px;
+      bottom: -20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.06);
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat h3 {
+      font-size: 2.4rem;
+      color: var(--vermelho);
+    }
+
+    footer {
+      background: #000000;
+      padding: 60px 8% 40px;
+      text-align: center;
+    }
+
+    footer h2 {
+      color: var(--vermelho);
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: var(--branco);
+      text-decoration: none;
+      display: inline-block;
+      margin: 8px 12px;
+      opacity: 0.9;
+    }
+
+    footer a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    footer p {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+    @media (max-width: 768px) {
+      .player-img {
+        display: none;
+      }
+    }
+  </style></head>
+<body>  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Flamengo_braz_logo.svg" alt="Escudo do Flamengo">
+    <h1>Clube de Regatas do Flamengo</h1>
+    <p>Uma nação movida por paixão, raça e amor. O Flamengo não é apenas um clube, é identidade, história e emoção.</p>
+    <div class="scroll">⬇ Role para baixo</div>
+  </header>  <section>
+    <div class="card">
+      <h2>🔥 História</h2>
+      <p>Fundado em 1895, o Flamengo construiu uma das maiores histórias do futebol mundial, com ídolos eternos, jogos memoráveis e uma torcida incomparável.</p>
+      <img class="player-img player-right" src="https://i.imgur.com/9XqK7Qy.png" alt="Jogador do Flamengo">
+    </div><div class="card">
+  <h2>🏆 Conquistas</h2>
+  <p>O Flamengo é sinônimo de títulos: Libertadores, Brasileirão, Copa do Brasil, Supercopa e Mundial. Um clube acostumado a vencer.</p>
+  <img class="player-img player-left" src="https://i.imgur.com/1R6QFzF.png" alt="Jogador do Flamengo">
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <h3>40M+</h3>
+    <p>Torcedores</p>
+  </div>
+  <div class="stat">
+    <h3>8</h3>
+    <p>Brasileirões</p>
+  </div>
+  <div class="stat">
+    <h3>3</h3>
+    <p>Libertadores</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>❤️ A Nação Rubro-Negra</h2>
+  <p>Reconhecida mundialmente, a Nação Rubro-Negra transforma qualquer estádio em casa. Onde o Flamengo joga, a torcida comparece.</p>
+  <img class="player-img player-right" src="https://i.imgur.com/6yZxQnQ.png" alt="Torcida do Flamengo">
+</div>
+
+  </section>  <footer>
+    <h2>📞 Contatos Oficiais</h2>
+    <a href="https://www.flamengo.com.br" target="_blank">Site Oficial</a>
+    <a href="https://www.instagram.com/flamengo" target="_blank">Instagram</a>
+    <a href="https://twitter.com/Flamengo" target="_blank">X (Twitter)</a>
+    <a href="https://www.youtube.com/@flamengo" target="_blank">YouTube</a><p>© 2025 • Site demonstrativo sobre o Clube de Regatas do Flamengo • Pronto para hospedagem</p>
+
+  </footer>  <script>
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+  </script></body>
+</html>
